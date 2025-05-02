@@ -32,6 +32,8 @@ Mensaje: ${mensaje}
   });
 });
 
-app.listen(3001, () => {
-  console.log("Servidor escuchando en http://localhost:3001");
+// ✅ Puerto dinámico para Render o 3001 en local
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
